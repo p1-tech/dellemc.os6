@@ -1,6 +1,12 @@
 ---
 # tasks file for os6
 
+ - name: "Collect already configured SNMP communities"
+   os6_command:
+     commands:
+       - "show running-config | include \"snmp-server community\""
+   register: snmp_communities
+    
  - name: "Generating SNMP configuration for os6"
    template:
       src: os6_snmp.j2
