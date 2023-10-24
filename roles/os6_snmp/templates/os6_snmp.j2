@@ -43,13 +43,15 @@ no snmp-server location
     {% if value %}
       {% for item in value %}
         {% if item.name is defined and item.name %}
-          {% if item.state is defined and item.state == "absent" %}
+          {% for exists in snmp_communities.stdout %}
+            {% if item.state is defined and item.name in exists and item.state == "absent" %}
 no snmp-server community {{ item.name }}
-          {% else %}
-            {% if item.access_mode is defined and item.access_mode %}
+            {% else %}
+              {% if item.access_mode is defined and item.access_mode %}
 snmp-server community "{{ item.name }}" {{ item.access_mode }}
+              {% endif %}
             {% endif %}
-          {% endif %}
+          {% endfor %}
         {% endif %}
       {% endfor %}
     {% endif %}
