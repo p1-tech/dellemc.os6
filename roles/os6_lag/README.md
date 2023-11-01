@@ -13,6 +13,8 @@ Role variables
 - Object drives the tasks in this role
 - `os6_lag` (dictionary) contains the hostname (dictionary)
 - Hostname is the value of the *hostname* variable that corresponds to the name of the OS device
+- If `os6_cfg_generate` is set to true, the variable generates the role configuration commands in a file
+- If `os6_cfg_deploy` is set to true, the variable deploys the role configuration commands to the ansible_host
 - Any role variable with a corresponding state variable setting to absent negates the configuration of that variable
 - Setting an empty value to any variable negates the corresponding configuration
 - `os6_lag` (dictionary) holds a dictionary with the port-channel ID key in `Po <ID>` format (1 to 128 for os6)
