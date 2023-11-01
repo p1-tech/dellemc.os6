@@ -5,7 +5,7 @@
    template:
       src: os6_oob.j2
       dest: "{{ build_dir }}/oob6_{{ hostname }}.conf.part"
-   when: (ansible_network_os is defined and ansible_network_os == "dellemc.os6.os6") and ((os6_cfg_generate | default('False')) | bool)
+   when: ((os6_cfg_generate | default('False')) | bool)
    register: generate_output
 
  - name: "Provisioning out-of-band configuration for os6"
