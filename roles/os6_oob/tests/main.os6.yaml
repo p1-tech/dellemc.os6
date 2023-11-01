@@ -1,0 +1,5 @@
+# vars file for dellemc.os6.os6_oob
+# Sample variables for OS6 device
+os6_oob:
+    cidr: "{{ ansible_host }}/24"
+    gateway: "172.16.10.1"
