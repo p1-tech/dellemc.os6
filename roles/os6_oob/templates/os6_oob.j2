@@ -1,0 +1,15 @@
+#jinja2: trim_blocks: True,lstrip_blocks: True
+{################################
+
+Purpose:
+Configure out-of-band interface commands for os6 Devices.
+
+os6_oob:
+    cidr: "{{ ansible_host }}/24"
+    gateway: "172.16.10.1"
+
+################################}
+interface out-of-band
+ip address {{ os6_oob.cidr | ansible.utils.ipaddr('address') }} {{ os6_oob.cidr | ansible.utils.ipaddr('netmask') }} {{ os6_oob.gateway }}
+no shutdown
+exit

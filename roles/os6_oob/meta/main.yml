@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: "Chris Born, P1 Technologies"
+  description: "Create and/or provision configuration for Out-of-Band Management interface on Dell OS6 network switches."
+  company: "P1 Technologies"
+  license: GPLv3
+  min_ansible_version: 2.9.6
+  
+  platforms:
+  - name: os6
+
+  galaxy_tags:
+    - networking
+    - dell
+    - emc
+    - dellemc
+    - os6

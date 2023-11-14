@@ -60,7 +60,7 @@ Ansible Dell EMC Networking roles require connection information to establish co
 Example playbook
 ----------------
 
-This example uses the *os6-interface* role to set up description, MTU, admin status, portmode, and switchport details for an interface. The example creates a *hosts* file with the switch details and orresponding variables. The hosts file should define the `ansible_network_os` variable with corresponding Dell EMC OS6 name.
+This example uses the *os6-interface* role to set up description, MTU, admin status, portmode, and switchport details for an interface. The example creates a *hosts* file with the switch details and corresponding variables. The hosts file should define the `ansible_network_os` variable with corresponding Dell EMC OS6 name.
 
 When `os6_cfg_generate` is set to true, the variable generates the configuration commands as a .part file in *build_dir* path. By default, this variable is set to false. The example writes a simple playbook that only references the *os6-interface* role.
 
