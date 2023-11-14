@@ -11,6 +11,7 @@ Role variables
 
 - Role is abstracted using the `ansible_network_os` variable that can take `dellemc.os6.os6` as a value 
 - If `os6_cfg_generate` is set to true, the variable generates the role configuration commands in a file
+- If `os6_cfg_deploy` is set to true, the variable deploys the role configuration commands to the ansible_host
 - Any role variable with a corresponding state variable set to absent negates the configuration of that variable
 - For variables with no state variable, setting an empty value for the variable negates the corresponding configuration
 - `os6_vlan` (dictionary) holds the key with the VLAN ID key and default-vlan key.

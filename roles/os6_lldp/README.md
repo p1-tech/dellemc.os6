@@ -9,6 +9,7 @@ Role variables
 --------------
 
 - If `os6_cfg_generate` is set to true, the variable generates the role configuration commands in a file
+- If `os6_cfg_deploy` is set to true, the variable deploys the role configuration commands to the ansible_host
 - Any role variable with a corresponding state variable set to absent negates the configuration of that variable
 - Setting an empty value for any variable negates the corresponding configuration
 - Variables and values are case-sensitive
